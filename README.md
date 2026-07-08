@@ -2,7 +2,7 @@
 
 A clean, modern weather application built with **HTML, CSS, and vanilla JavaScript** that fetches real-time weather data using the **Fetch API** and the **OpenWeatherMap** service. It displays current conditions, a 5-day forecast, dynamic video backgrounds based on the weather, and works offline as an installable **Progressive Web App (PWA)**.
 
-> First-semester ICT project — Air University, National Cyber Security Academy (NCSA).
+> ICT project 
 
 ---
 
