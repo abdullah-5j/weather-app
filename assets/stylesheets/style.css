@@ -1,0 +1,244 @@
+:root {
+    --text-color: #FFFFFF;
+    --background-gradient: linear-gradient(135deg, #4A90E2, #87CEEB);
+    --glass-background: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -ms-overflow-style: none;
+    color: var(--text-color);
+    background: var(--background-gradient);
+    font-family: 'Poppins', sans-serif;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 1rem;
+}
+
+.weather-card {
+    padding: 1.2rem;
+    border-radius: 18px;
+    text-align: center;
+    transition: transform 0.25s ease;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.weather-card:hover {
+    transform: translateY(-4px);
+}
+
+.weather-card.main {
+    grid-row: span 2;
+}
+
+.weather-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.weather-card p {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.weather-card span {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.forecast-card {
+    max-width: 180px;
+    padding: 1rem;
+    flex: 1 1 140px;
+    border-radius: 18px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.forecast-card h3 {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.forecast-card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.forecast-card span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+#bg-video {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    inset: 0;
+    opacity: 0;
+    z-index: -2;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+body.video-active::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+#header,
+#footer {
+    height: 10vh;
+    flex-shrink: 0;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+#app-container {
+    width: clamp(70%, 60vw, 900px);
+    max-width: 900px;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    will-change: height;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: var(--glass-background);
+}
+
+#search-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#search-container input {
+    flex: 1;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search-container button {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #333333;
+    background: #FFFFFF;
+}
+
+#search-container button:hover {
+    background: #f1f1f1;
+}
+
+#result-container {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .weather-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forecast-container {
+        flex: 1 1 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-card.main {
+        grid-row: span 1;
+    }
+
+    .forecast-container {
+        flex: 1 1 140px;
+    }
+
+    #app-container {
+        width: 90%;
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    #title-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #search-container {
+        flex-direction: column;
+    }
+
+    #search-container input,
+    #search-container button {
+        width: 100%;
+    }
+}
