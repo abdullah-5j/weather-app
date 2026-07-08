@@ -82,20 +82,20 @@ Then open **http://localhost:8000** in your browser.
 weather-app/
 ├── index.html                  # Main HTML structure
 ├── manifest.json               # PWA manifest
-├── sw.js                       # Service Worker (caching / offline)
+├── sw.js                       # Service Worker
 ├── favicon.ico
 ├── assets/
-│   ├── images/                 # App icons (192px, 512px)
+│   ├── images/                 # App icons
 │   ├── scripts/
 │   │   └── script.js           # Core application logic
 │   ├── stylesheets/
 │   │   └── style.css           # Styling & responsive layout
-│   └── videos/                 # Weather background videos (see note below)
+│   └── videos/                 # Weather background videos 
 ├── .gitignore
 ├── LICENSE
 └── README.md
 ```
-
+> **Note on videos:** The background video files are not included in this repository to keep it lightweight. The app still works without them — it simply won't show a video background. To enable them, add your own `.mp4` files to `assets/videos/` named: `clear.mp4`, `clouds.mp4`, `rain.mp4`, `snow.mp4`, `thunderstorm.mp4`, `mist.mp4`.
 
 ---
 
