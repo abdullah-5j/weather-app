@@ -21,7 +21,7 @@ A clean, modern weather application built with **HTML, CSS, and vanilla JavaScri
 
 ---
 
-## 📸 Screenshot
+## 🖼️ Interface
 
 ![Weather App screenshot](assets/images/image.png)
 
@@ -85,3 +85,53 @@ Then open **http://localhost:8000** in your browser.
 ---
 
 ## 📂 Project Structure
+
+weather-app/
+├── index.html                  # Main HTML structure
+├── manifest.json               # PWA manifest
+├── sw.js                       # Service Worker
+├── favicon.ico
+├── assets/
+│   ├── images/                 # App icons
+│   ├── scripts/
+│   │   └── script.js           # Core application logic
+│   ├── stylesheets/
+│   │   └── style.css           # Styling & responsive layout
+│   └── videos/                 # Weather background videos
+├── .gitignore
+├── LICENSE
+└── README.md
+> **Note on videos:** The background video files are not included in this repository to keep it lightweight. The app still works without them — it simply won't show a video background. To enable them, add your own `.mp4` files to `assets/videos/` named: `clear.mp4`, `clouds.mp4`, `rain.mp4`, `snow.mp4`, `thunderstorm.mp4`, `mist.mp4`.
+
+---
+
+## 🧪 How It Works
+
+1. The user enters a city name (or allows location access).
+2. The app sends two asynchronous requests using the Fetch API — one for current weather, one for the forecast — running them together with `Promise.all()`.
+3. The JSON responses are parsed and the relevant data is extracted.
+4. The UI is dynamically built and displayed without reloading the page.
+5. A matching background video is loaded based on the current condition.
+
+---
+
+## 👥 Authors
+
+- **Ahmed Ehsan**
+- **Fatima Abbasi**
+- **Abdullah Maaz**
+- **Muhammad Abdullah**
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) — feel free to use it as a learning reference.
+
+---
+
+## 🙏 Acknowledgements
+
+- [OpenWeatherMap](https://openweathermap.org/) for the free weather API.
+- [Font Awesome](https://fontawesome.com/) for icons.
+- [Google Fonts (Poppins)](https://fonts.google.com/specimen/Poppins) for typography.
