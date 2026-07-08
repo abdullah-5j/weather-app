@@ -38,7 +38,7 @@ A clean, modern weather application built with **HTML, CSS, and vanilla JavaScri
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/weather-app.git
+git clone https://github.com/abdullah-5j/weather-app.git
 cd weather-app
 ```
 
