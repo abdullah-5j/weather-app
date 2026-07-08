@@ -116,7 +116,7 @@ weather-app/
 4. The UI is dynamically built and displayed without reloading the page.
 5. A matching background video is loaded based on the current condition.
 
-
+---
 
 ## 📄 License
 
