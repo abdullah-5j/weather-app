@@ -96,7 +96,6 @@ weather-app/
 └── README.md
 ```
 
-> **Note on videos:** The background video files are not included in this repository to keep it lightweight. The app still works without them (it simply won't show a video background). To enable them, add your own `.mp4` files to `assets/videos/` named: `clear.mp4`, `clouds.mp4`, `rain.mp4`, `snow.mp4`, `thunderstorm.mp4`, `mist.mp4`.
 
 ---
 
@@ -112,12 +111,11 @@ weather-app/
 
 ## 👥 Authors
 
-- **Ahmed Ehsan** — 2500658
-- **Fatima Abbasi** — 2500726
-- **Abdullah Maaz** — 2500650
-- **Muhammad Abdullah** — 2500694
+- **Ahmed Ehsan** 
+- **Fatima Abbasi** 
+- **Abdullah Maaz** 
+- **Muhammad Abdullah** 
 
-Submitted to **Mam Salma Iqbal**, Air University — NCSA.
 
 ---
 
